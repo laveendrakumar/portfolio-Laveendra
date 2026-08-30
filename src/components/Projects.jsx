@@ -1,5 +1,5 @@
-import Section from './Section'
-import { projects } from '../data'
+import Section from "./Section";
+import { projects } from "../data";
 
 export default function Projects() {
   return (
@@ -13,14 +13,44 @@ export default function Projects() {
             <h3 className="project-title">{p.title}</h3>
             <p className="project-location">{p.location}</p>
             <p className="card-body">{p.blurb}</p>
+
+            {(p.live || p.code) && (
+              <div className="project-links">
+                {p.live && (
+                  <a
+                    href={p.live}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="project-link"
+                  >
+                    <i className="ti ti-external-link" aria-hidden="true" />
+                    Live demo
+                  </a>
+                )}
+                {p.code && (
+                  <a
+                    href={p.code}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="project-link"
+                  >
+                    <i className="ti ti-brand-github" aria-hidden="true" />
+                    Source code
+                  </a>
+                )}
+              </div>
+            )}
+
             <div className="tags">
               {p.tags.map((t) => (
-                <span className="tag" key={t}>{t}</span>
+                <span className="tag" key={t}>
+                  {t}
+                </span>
               ))}
             </div>
           </article>
         ))}
       </div>
     </Section>
-  )
+  );
 }
