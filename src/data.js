@@ -8,7 +8,7 @@ export const profile = {
   github: "https://github.com/laveendrakumar/",
   linkedin: "https://www.linkedin.com/in/laveendra-kumar-yarramsetty-24111331b",
   photo: "./profile.jpg",
-  resume: "./Laveendra_Kumar_Resume.pdf",
+  resume: '/Laveendra_Kumar_Resume.pdf',
   liveProject: "https://splitifybuddy.netlify.app",
   about:
     "MERN stack developer building enterprise web applications end to end. React and TypeScript on the front, Node.js and Express behind it, MongoDB and SQL underneath. I design REST APIs, implement authentication and role based access, and ship tested interfaces through CI/CD pipelines to AWS. Four years at TCS delivering telecom and B2B platforms for clients in Malaysia and London, plus side projects I build and deploy myself.",
@@ -98,6 +98,7 @@ export const projects = [
 
 export const certifications = [
   { name: "GitHub Foundations", issuer: "Microsoft / GitHub", year: "2026" },
+  { name: "Claude Certified Developer - Foundations", issuer: "Anthropic / Claude", year: "2026" },
   { name: "Namaste React", issuer: "NamasteDev.com", year: "2025" },
   { name: "Namaste JavaScript", issuer: "NamasteDev.com", year: "2024" },
 ];
